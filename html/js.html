@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body >
+<body>
     <h1><a href="index.html">WEB</a></h1>
     <input type="button" value="night" onclick="
     document.querySelector('body').style.background = 'black';
@@ -18,6 +18,19 @@
     <input type="button" value="day" onclick="
     document.querySelector('body').style.background = 'white';
     document.querySelector('body').style.color='black';
+    ">
+    <input type="button" value="black" onclick="
+    if(document.querySelector('body').dataset.mode === 'day'){
+        document.querySelector('body').style.background = 'black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('body').dataset.mode = 'night';
+        this.value = 'day';
+    } else {
+        document.querySelector('body').style.background = 'white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('body').dataset.mode = 'day';
+        this.value = 'night';
+    }
     ">
     <div id="grid">
         <ol>
