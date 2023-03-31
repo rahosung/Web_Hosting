@@ -18,22 +18,24 @@
         target.style.color='white';
         this.value = 'day';
 
-        let links = document.querySelectorAll('a');
+        let alist = document.querySelectorAll('a');
         let i = 0;
-        while(i<links.length){
-            links[i].style.color='powderblue';
-            i=i+1;
+        while(i < alist.length){
+            console.log(alist[i]);
+            alist[i].style.color = 'powderblue';
+            i++
         }
     } else {
         target.style.background = 'white';
         target.style.color='black';
         this.value = 'night';
 
-        let links = document.querySelectorAll('a');
+        let alist = document.querySelectorAll('a');
         let i = 0;
-        while(i<links.length){
-            links[i].style.color='blue';
-            i=i+1;
+        while(i < alist.length){
+            console.log(alist[i]);
+            alist[i].style.color = 'blue';
+            i++
         }
     }
     ">
