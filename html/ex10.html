@@ -29,6 +29,17 @@
             document.write(key + ' : ' + coworkers[key] + '<br>');
         }
     </script>
+    <h2>Property & Method</h2>
+    <!--Property 객체에 소속된 변수-->
+    <!--Method 객체에 소속된 함수-->
+    <script>
+        coworkers.showAll = function(){
+            for (let key in this) {
+                document.write(key + ' : ' + this[key] + '<br>');
+            }
+        }
+        coworkers.showAll();
+    </script>
 </body>
 
 </html>
