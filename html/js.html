@@ -7,44 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB!-JAVASCRIPT</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script>
-        let Links = {
-            setColor: function (color) {
-                let alist = document.querySelectorAll('a');
-                let i = 0;
-                while (i < alist.length) {
-                    console.log(alist[i]);
-                    alist[i].style.color = color;
-                    i++
-                }
-            }
-        }
-        let Body = {
-            setColor: function (color) {
-                document.querySelector('body').style.color = color;
-            },
-            setBackgroundColor: function (color) {
-                document.querySelector('body').style.background = color;
-            }
-        };
-
-        function nightDayHandler(self) {
-            let target = document.querySelector('body');
-            if (self.value === 'night') {
-                Body.setBackgroundColor('black');
-                Body.setColor('white');
-                self.value = 'day';
-
-                Links.setColor('powderblue');
-            } else {
-                Body.setBackgroundColor('white');
-                Body.setColor('black');
-                self.value = 'night';
-
-                Links.setColor('blue');
-            }
-        }
-    </script>
+    <script src="../js/colors.js"></script>
 </head>
 
 <body>
