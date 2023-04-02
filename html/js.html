@@ -7,38 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB!-JAVASCRIPT</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script>
+        function nightDayHandler(self) {
+            let target = document.querySelector('body');
+            if (self.value === 'night') {
+                target.style.background = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+
+                let alist = document.querySelectorAll('a');
+                let i = 0;
+                while (i < alist.length) {
+                    console.log(alist[i]);
+                    alist[i].style.color = 'powderblue';
+                    i++
+                }
+            } else {
+                target.style.background = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+
+                let alist = document.querySelectorAll('a');
+                let i = 0;
+                while (i < alist.length) {
+                    console.log(alist[i]);
+                    alist[i].style.color = 'blue';
+                    i++
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input type="button" value="night" onclick="
-    let target = document.querySelector('body');
-    if(this.value === 'night'){
-        target.style.background = 'black';
-        target.style.color='white';
-        this.value = 'day';
-
-        let alist = document.querySelectorAll('a');
-        let i = 0;
-        while(i < alist.length){
-            console.log(alist[i]);
-            alist[i].style.color = 'powderblue';
-            i++
-        }
-    } else {
-        target.style.background = 'white';
-        target.style.color='black';
-        this.value = 'night';
-
-        let alist = document.querySelectorAll('a');
-        let i = 0;
-        while(i < alist.length){
-            console.log(alist[i]);
-            alist[i].style.color = 'blue';
-            i++
-        }
-    }
-    ">
+    <input type="button" value="night" onclick="nightDayHandler(this)">
     <div id="grid">
         <ol>
             <li><a href="html.html">HTML</a></li>
