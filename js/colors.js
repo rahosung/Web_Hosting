@@ -1,5 +1,7 @@
 let Links = {
     setColor: function (color) {
+        $('a').css('color', color); //jquery 사용
+        
         // let alist = document.querySelectorAll('a');
         // let i = 0;
         // while (i < alist.length) {
@@ -7,17 +9,18 @@ let Links = {
         //     alist[i].style.color = color;
         //     i++
         // }
-        $('a').css('color',color);
     }
 }
 let Body = {
     setColor: function (color) {
+        $('body').css('color', color); //jquery 사용
+
         // document.querySelector('body').style.color = color;
-        $('body').css('color',color);
     },
     setBackgroundColor: function (color) {
+        $('body').css('backgroundColor', color); //jquery 사용
+
         // document.querySelector('body').style.background = color;
-        $('body').css('backgroundColor',color);
     }
 };
 
